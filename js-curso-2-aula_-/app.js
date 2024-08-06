@@ -1,25 +1,17 @@
+function multiplicarNumero(a) {
+   return a*a;
+}
+let numero = multiplicarNumero(10);
+console.log(numero);
+
 let titulo = document.querySelector('h1');
 titulo.innerHTML = 'Hora do desafio';
 
-function exibirMensagemNoConsole() {
-    console.log('O botão foi clicado');
-};
 
-function exibirAlerta() {
-    alert('Eu amo JS');
+function verificarChute() {
+    let chute = document.querySelector('input').value;
+    console.log(chute == numeroSecreto);
 }
-
-// function exibirPrompt() {
-//     let nomeDaCidade = prompt('Digite o nome de uma cidade do Brasil que você gosta muito:')
-//     alert(`Estive em ${nomeDaCidade} e lembrei de você`)
-// }
-
-// function somarValores() {
-//     let primeiroNumero = parseInt(prompt('Digite o primeiro número'));
-//     let segundoNumero = parseInt(prompt('Digite o segundo número'));
-//     let resultado = primeiroNumero + segundoNumero;
-//     alert(`${primeiroNumero} + ${segundoNumero} = ${resultado}`)
-// }
 
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
@@ -28,3 +20,7 @@ function exibirTextoNaTela(tag, texto) {
 
 exibirTextoNaTela('h1','Jogo do número secreto');
 exibirTextoNaTela('p', 'Escolha um número entre 1 e 10');
+
+function gerarNumeroAleatorio() {
+    return parseInt(Math.random() * 10 + 1);
+}
